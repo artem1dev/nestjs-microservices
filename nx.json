@@ -1,0 +1,39 @@
+{
+  "npmScope": "nestjs-microservices",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/nest"
+  },
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    ".eslintrc.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e"
+        ],
+        "accessToken": "MTA5ODJkMmQtNjgxOC00MDRlLWE0MjctM2E3NjViM2MyYjk2fHJlYWQtd3JpdGU="
+      }
+    }
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
+  },
+  "defaultProject": "account"
+}
